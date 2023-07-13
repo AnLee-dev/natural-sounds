@@ -8,9 +8,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'my-custom-bg-class': "url('https://e3.365dm.com/22/02/2048x1152/skynews-rogue-wave_5673312.jpg')",
       },
     },
   },
