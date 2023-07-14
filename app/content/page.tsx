@@ -1,111 +1,145 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
 function page() {
+function setVolume(id: any, value: any) {
+    const audio = document.getElementById(`sound${id}`);
+    if(audio){
+      audio.volume = value / 100;
+      console.log(audio);
+      
+    }
+  }
   return (
     <section className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-col text-center w-full mb-20">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
-            The Real Natural Sounds
-          </h1>
-        </div>
         <div className="flex flex-wrap">
-          <div className="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
-            <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">
-              Shooting Stars
+          <div className="xl:w-1/6 lg:w-1/4 md:w-full px-8 py-6">
+            <div className="bg-icon bg-rain w-24 h-24 mx-auto my-0"></div>
+            <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2 text-center">
+              Rain
             </h2>
-            <p className="text-white text-base mb-4">
-              Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-              hexagon disrupt edison bulbche.
-            </p>
-            <a className="text-white inline-flex items-center">
-              Learn More
-              <svg
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                className="w-4 h-4 ml-2"
-                viewBox="0 0 24 24"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
+            <div className="w-24 mx-auto my-0">
+              <span className="w-24">
+                <input
+                  type="range"
+                  defaultValue={0}
+                  min="0"
+                  max="10"
+                  step="0.02"
+                  className="w-24 absolute appearance-none bg-transparent [&::-webkit-slider-runnable-track]:rounded-full [&::-webkit-slider-runnable-track]:bg-gray-300 [&::-webkit-slider-runnable-track]:h-2 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:relative [&::-webkit-slider-thumb]:bottom-2 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white"
+                />
+              </span>
+            </div>
           </div>
-          <div className="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
-            <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">
-              The Catalyzer
+          <div className="xl:w-1/6 lg:w-1/4 md:w-full px-8 py-6">
+            <div className="bg-icon bg-thunder w-24 h-24 mx-auto my-0"></div>
+            <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2 text-center">
+              Thunder
             </h2>
-            <p className="text-white text-base mb-4">
-              Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-              hexagon disrupt edison bulbche.
-            </p>
-            <a className="text-white inline-flex items-center">
-              Learn More
-              <svg
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                className="w-4 h-4 ml-2"
-                viewBox="0 0 24 24"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
+            <div className="w-24 mx-auto my-0">
+              <span className="w-24">
+                <input
+                  type="range"
+                  defaultValue={0}
+                  min="0"
+                  max="10"
+                  step="0.02"
+                  className="w-24 absolute appearance-none bg-transparent [&::-webkit-slider-runnable-track]:rounded-full [&::-webkit-slider-runnable-track]:bg-gray-300 [&::-webkit-slider-runnable-track]:h-2 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:relative [&::-webkit-slider-thumb]:bottom-2 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white"
+                />
+              </span>
+            </div>
           </div>
-          <div className="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
-            <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">
-              Neptune
+          <div className="xl:w-1/6 lg:w-1/4 md:w-full px-8 py-6">
+            <div className="bg-icon bg-wave w-24 h-24 mx-auto my-0"></div>
+            <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2 text-center">
+              Waves
             </h2>
-            <p className="text-white text-base mb-4">
-              Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-              hexagon disrupt edison bulbche.
-            </p>
-            <a className="text-white inline-flex items-center">
-              Learn More
-              <svg
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                className="w-4 h-4 ml-2"
-                viewBox="0 0 24 24"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
+            <div className="w-24 mx-auto my-0">
+              <span className="w-24">
+                <input
+                  type="range"
+                  defaultValue={0}
+                  min="0"
+                  max="10"
+                  step="0.02"
+                  className="w-24 absolute appearance-none bg-transparent [&::-webkit-slider-runnable-track]:rounded-full [&::-webkit-slider-runnable-track]:bg-gray-300 [&::-webkit-slider-runnable-track]:h-2 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:relative [&::-webkit-slider-thumb]:bottom-2 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white"
+                />
+              </span>
+            </div>
           </div>
-          <div className="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
-            <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">
-              Melanchole
+          <div className="xl:w-1/6 lg:w-1/4 md:w-full px-8 py-6">
+            <div className="bg-icon bg-wind w-24 h-24 mx-auto my-0"></div>
+            <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2 text-center">
+              Wind
             </h2>
-            <p className="text-white text-base mb-4">
-              Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-              hexagon disrupt edison bulbche.
-            </p>
-            <a className="text-white inline-flex items-center">
-              Learn More
-              <svg
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                className="w-4 h-4 ml-2"
-                viewBox="0 0 24 24"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
+            <div className="w-24 mx-auto my-0">
+              <span className="w-24">
+                <input
+                  type="range"
+                  defaultValue={0}
+                  min="0"
+                  max="10"
+                  step="0.02"
+                  className="w-24 absolute appearance-none bg-transparent [&::-webkit-slider-runnable-track]:rounded-full [&::-webkit-slider-runnable-track]:bg-gray-300 [&::-webkit-slider-runnable-track]:h-2 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:relative [&::-webkit-slider-thumb]:bottom-2 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white"
+                />
+              </span>
+            </div>
+          </div>
+          <div className="xl:w-1/6 lg:w-1/4 md:w-full px-8 py-6">
+            <div className="bg-icon bg-fire w-24 h-24 mx-auto my-0"></div>
+            <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2 text-center">
+              Fire
+            </h2>
+            <div className="w-24 mx-auto my-0">
+              <span className="w-24">
+                <input
+                  type="range"
+                  defaultValue={0}
+                  min="0"
+                  max="10"
+                  onChange={(e) => setVolume(5, e.target.value)}
+                  step="0.02"
+                  className="w-24 absolute appearance-none bg-transparent [&::-webkit-slider-runnable-track]:rounded-full [&::-webkit-slider-runnable-track]:bg-gray-300 [&::-webkit-slider-runnable-track]:h-2 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:relative [&::-webkit-slider-thumb]:bottom-2 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white"
+                />
+                <audio
+                  id=" "
+                  className="block w-full max-w-md mx-auto"
+                  loop
+                  preload="auto"
+                >
+                  <source
+                    src="https://st2.asoftmurmur.com/assets/p/content/rain/main-rain.mp4"
+                    type="audio/mpeg"
+                  />
+                  <source
+                    className="ogg rain"
+                    src="https://st2.asoftmurmur.com/assets/p/content/rain/main-rain.ogg"
+                    type="audio/ogg"
+                  />
+                </audio>
+              </span>
+            </div>
+          </div>
+          <div className="xl:w-1/6 lg:w-1/4 md:w-full px-8 py-6">
+            <div className="bg-icon bg-birds w-24 h-24 mx-auto my-0"></div>
+            <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2 text-center">
+              Birds
+            </h2>
+            <div className="w-24 mx-auto my-0">
+              <span className="w-24">
+                <input
+                  type="range"
+                  defaultValue={0}
+                  min="0"
+                  max="10"
+                  step="0.02"
+                  className="w-24 absolute appearance-none bg-transparent [&::-webkit-slider-runnable-track]:rounded-full [&::-webkit-slider-runnable-track]:bg-gray-300 [&::-webkit-slider-runnable-track]:h-2 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:relative [&::-webkit-slider-thumb]:bottom-2 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white"
+                />
+              </span>
+            </div>
           </div>
         </div>
-        <button className="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-          Button
-        </button>
       </div>
     </section>
   );

@@ -24,11 +24,14 @@ function page() {
           )}
           </div>
           <div className="flex justify-center">
-            <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-              Button
+            <button className="inline-flex text-white border-white border-2 py-2 px-6 focus:outline-none hover:bg-gray-500 rounded text-lg">
+              Timers
             </button>
-            <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
-              Button
+            <button className="ml-4 inline-flex text-white border-white border-2 py-2 px-6 focus:outline-none hover:bg-gray-500 rounded text-lg">
+              Share
+            </button>
+            <button className="ml-4 inline-flex text-white border-white border-2 py-2 px-6 focus:outline-none hover:bg-gray-500 rounded text-lg">
+              Mixes
             </button>
           </div>
         </div>

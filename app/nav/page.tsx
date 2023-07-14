@@ -11,9 +11,9 @@ function page() {
           <span className="ml-3 text-xl">Natural Sounds</span>
         </a>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          <a className="mr-5 hover:text-gray-900">Blog</a>
-          <a className="mr-5 hover:text-gray-900">Author</a>
-          <a className="mr-5 hover:text-gray-900">About</a>
+          <a className="mr-5 hover:text-gray-800 hover:cursor-pointer">Blog</a>
+          <a className="mr-5 hover:text-gray-800 hover:cursor-pointer">Author</a>
+          <a className="mr-5 hover:text-gray-800 hover:cursor-pointer">About</a>
         </nav>
           <button className="text-base mt-4 mr-1 md:mt-0 text-white hover:text-gray-900">Login</button>
           <svg
