@@ -7,9 +7,10 @@ import React from "react";
 
 type TProps = {
   url: string;
+  playing: boolean;
 };
 
-function VolumeControls ({ url }: TProps) {
+function VolumeControls({ url, playing }: TProps) {
   const ReactPlayer = _ReactPlayer as unknown as React.FC<ReactPlayerProps>;
   const [volume, setVolume] = useState<number>(0);
 
@@ -19,10 +20,16 @@ function VolumeControls ({ url }: TProps) {
 
   return (
     <React.Fragment>
-      <ReactPlayer className="w-0 !important h-0 !important" url={url} playing={true} volume={volume} loop={true} />
+      <ReactPlayer
+        className="w-0 !important h-0 !important"
+        url={url}
+        playing={playing}
+        volume={volume}
+        loop={true}
+      />
       <VolumeAudio volume={volume} handleVolumeChange={handleVolumeChange} />
     </React.Fragment>
   );
-};
+}
 
 export default VolumeControls;

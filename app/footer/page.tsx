@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import hill from '../../public/images/hill.jpg'
-import beach from '../../public/images/beach.jpg'
-import forest from '../../public/images/forest.jpg'
-import lake from '../../public/images/lake.jpg'
-import lake2 from '../../public/images/lake2.jpg'
-import mountain from '../../public/images/mountain.jpg'
+import hill from "../../public/images/hill.jpg";
+import beach from "../../public/images/beach.jpg";
+import forest from "../../public/images/forest.jpg";
+import lake from "../../public/images/lake.jpg";
+import lake2 from "../../public/images/lake2.jpg";
+import mountain from "../../public/images/mountain.jpg";
 function Footer() {
   return (
     <div className="text-gray-600 body-font">
