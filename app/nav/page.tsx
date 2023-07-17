@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import logo from "@/public/images/logo3.svg";
 import Image from "next/image";
@@ -11,9 +10,9 @@ function page() {
           <span className="ml-3 text-xl">Natural Sounds</span>
         </a>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          <a className="mr-5 hover:text-gray-800 hover:cursor-pointer">Blog</a>
-          <a className="mr-5 hover:text-gray-800 hover:cursor-pointer">Author</a>
-          <a className="mr-5 hover:text-gray-800 hover:cursor-pointer">About</a>
+          <a className="mr-5 hover:text-gray-800 hover:cursor-pointer" href="/blog">Blog</a>
+          <a className="mr-5 hover:text-gray-800 hover:cursor-pointer" href="/author">Author</a>
+          <a className="mr-5 hover:text-gray-800 hover:cursor-pointer" href="/about">About</a>
         </nav>
           <button className="text-base mt-4 mr-1 md:mt-0 text-white hover:text-gray-900">Login</button>
           <svg

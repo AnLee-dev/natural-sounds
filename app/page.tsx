@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Navbar from "@/app/nav/page";
 import Content from "@/app/content/page";
 import Footer from "@/app/footer/page";
