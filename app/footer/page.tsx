@@ -1,68 +1,74 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
-
+import Image from "next/image";
+import hill from '../../public/images/hill.jpg'
+import beach from '../../public/images/beach.jpg'
+import forest from '../../public/images/forest.jpg'
+import lake from '../../public/images/lake.jpg'
+import lake2 from '../../public/images/lake2.jpg'
+import mountain from '../../public/images/mountain.jpg'
 function Footer() {
   return (
-    <section className="text-gray-600 body-font">
+    <div className="text-gray-600 body-font">
       <div className="container px-5 py-24 mx-auto flex flex-wrap">
         <div className="flex w-full mb-20 flex-wrap">
           <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">
             Picture Natural
           </h1>
           <p className="lg:pl-6 lg:w-2/3 mx-auto text-white text-base">
-            status here
+            If you truly love nature, you will find beauty everywhere. - Laura
+            Ingalls Wilder
           </p>
         </div>
         <div className="flex flex-wrap md:-m-2 -m-1">
           <div className="flex flex-wrap w-1/2">
             <div className="md:p-2 p-1 w-1/2">
-              <img
-                alt="gallery"
+              <Image
+                alt="hill"
                 className="w-full object-cover h-full object-center block"
-                src="https://dummyimage.com/500x300"
+                src={hill}
               />
             </div>
             <div className="md:p-2 p-1 w-1/2">
-              <img
-                alt="gallery"
+              <Image
+                alt="Beach"
                 className="w-full object-cover h-full object-center block"
-                src="https://dummyimage.com/501x301"
+                src={beach}
               />
             </div>
             <div className="md:p-2 p-1 w-full">
-              <img
-                alt="gallery"
+              <Image
+                alt="forest"
                 className="w-full h-full object-cover object-center block"
-                src="https://dummyimage.com/600x360"
+                src={forest}
               />
             </div>
           </div>
           <div className="flex flex-wrap w-1/2">
             <div className="md:p-2 p-1 w-full">
-              <img
-                alt="gallery"
+              <Image
+                alt="lake"
                 className="w-full h-full object-cover object-center block"
-                src="https://dummyimage.com/601x361"
+                src={lake}
               />
             </div>
             <div className="md:p-2 p-1 w-1/2">
-              <img
-                alt="gallery"
+              <Image
+                alt="lake"
                 className="w-full object-cover h-full object-center block"
-                src="https://dummyimage.com/502x302"
+                src={lake2}
               />
             </div>
             <div className="md:p-2 p-1 w-1/2">
-              <img
-                alt="gallery"
+              <Image
+                alt="mountain"
                 className="w-full object-cover h-full object-center block"
-                src="https://dummyimage.com/503x303"
+                src={mountain}
               />
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 
