@@ -2,14 +2,14 @@
 import { useState } from "react";
 import { default as _ReactPlayer } from "react-player/lazy";
 import { ReactPlayerProps } from "react-player/types/lib";
-import { VolumeAudio } from "./volumeControls";
+import { VolumeAudio } from "./volumeAudio";
 import React from "react";
 
 type TProps = {
   url: string;
 };
 
-export const VolumeControls = ({ url }: TProps) => {
+function VolumeControls ({ url }: TProps) {
   const ReactPlayer = _ReactPlayer as unknown as React.FC<ReactPlayerProps>;
   const [volume, setVolume] = useState<number>(0);
 
@@ -24,3 +24,5 @@ export const VolumeControls = ({ url }: TProps) => {
     </React.Fragment>
   );
 };
+
+export default VolumeControls;

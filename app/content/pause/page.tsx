@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-function page() {
+function Pause() {
   const [isPlay, setIsPlay] = useState(false);
 
   function pause() {
@@ -39,4 +39,4 @@ function page() {
   );
 }
 
-export default page;
+export default Pause;

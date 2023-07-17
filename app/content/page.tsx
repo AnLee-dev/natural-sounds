@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { VolumeControls } from "../volumeControls/page";
+import VolumeControls from "../volumeControls/page";
 
 function page() {
 

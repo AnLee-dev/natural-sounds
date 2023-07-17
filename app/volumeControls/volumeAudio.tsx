@@ -1,9 +1,9 @@
 "use client";
-
 type Props = {
   volume: number;
   handleVolumeChange: (newVolume: number) => void;
 };
+
 export const VolumeAudio = ({
   volume,
   handleVolumeChange,
@@ -16,7 +16,6 @@ export const VolumeAudio = ({
   return (
       <input
         type="range"
-        defaultValue={0}
         min={0}
         max={1}
         step={0.02}
