@@ -23,7 +23,7 @@ function VolumeControls({ url, playing }: TProps) {
         className="w-0 !important h-0 !important"
         url={url}
         playing={playing}
-        volume={volume}
+        volume={0}
         loop={true}
         playsinline
       />
