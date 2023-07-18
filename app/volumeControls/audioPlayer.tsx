@@ -6,13 +6,18 @@ type TProps = {
   handlePlay: () => void;
   handlePause: () => void;
 };
+
 function AudioPlayer({ playing, handlePlay, handlePause }: TProps) {
 
-  const togglePlayAndPause = () => {
+  const togglePlayAndPause = (e: any) => {
+    console.log('hehe', e);
+    
     if (playing) {
       handlePause();
+      e.preventDefault();
     } else {
       handlePlay();
+      e.preventDefault();
     }
   };
 
@@ -31,12 +36,12 @@ function AudioPlayer({ playing, handlePlay, handlePause }: TProps) {
             {playing ? (
               <button
                 className="h-[4.5rem] w-[4.5rem] border-x-[1.6rem] mx-auto my-0 border-x-white border-y-0 border-y-transparent border-solid duration-[0.15s,0.1s] ease-[linear,ease] delay-[0s,0s] transition-[border,opacity]"
-                onClick={togglePlayAndPause}
+                onClick={(e) => togglePlayAndPause(e)}
               ></button>
             ) : (
               <button
                 className="h-[4.5rem] w-[4.5rem] border-l-[4.5rem] border-r-0 mx-auto my-0 border-x-white border-y-[2.5rem] border-y-transparent border-solid duration-[0.15s,0.1s] ease-[linear,ease] delay-[0s,0s] transition-[border,opacity]"
-                onClick={togglePlayAndPause}
+                onClick={(e) => togglePlayAndPause(e)}
               ></button>
             )}
           </div>

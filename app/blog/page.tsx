@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import hill from '../../public/images/hill.jpg'
+
 function Blog() {
   return (
     <section className="h-screen w-screen bg-my-custom-bg-class body-font">

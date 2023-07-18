@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { default as _ReactPlayer } from "react-player/lazy";
 import { ReactPlayerProps } from "react-player/types/lib";
-import { VolumeAudio } from "./volumeAudio";
+import VolumeAudio from "./volumeAudio";
 import React from "react";
 
 type TProps = {
@@ -17,6 +17,11 @@ function VolumeControls({ url, playing }: TProps) {
   const handleVolumeChange = (newVolume: number) => {
     setVolume(newVolume);
   };
+
+  const check = (e: any) =>{
+    console.log(e);
+    
+  }
 
   return (
     <React.Fragment>

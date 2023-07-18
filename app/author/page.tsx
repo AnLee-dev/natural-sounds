@@ -8,7 +8,7 @@ function Author() {
     <div className="h-screen w-screen flex justify-center items-center bg-my-custom-bg-class p-10">
       <div className="w-full h-5/6 md:w-4/6 py-4 flex justify-center max-w-7xl ">
         <div className="px-8">
-          <h1 className="text-indigo-600  text-2xl md:text-4xl font-semibold my-4 text-center">
+          <h1 className="text-white text-2xl md:text-4xl font-semibold my-4 text-center">
             Demo author
           </h1>
           <div className="flex items-center justify-center space-x-10">

@@ -4,7 +4,7 @@ type Props = {
   handleVolumeChange: (newVolume: number) => void;
 };
 
-export const VolumeAudio = ({ volume, handleVolumeChange }: Props) => {
+function VolumeAudio ({ volume, handleVolumeChange }: Props) {
   const handleChangeInVolume = (e: React.ChangeEvent<HTMLInputElement>) => {
     handleVolumeChange(Number(e.target.value));
   };
@@ -21,3 +21,5 @@ export const VolumeAudio = ({ volume, handleVolumeChange }: Props) => {
     />
   );
 };
+
+export default VolumeAudio;
