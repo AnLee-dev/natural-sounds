@@ -5,10 +5,12 @@ import Navbar from "@/app/nav/page";
 function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html>
-      <body className='mb:bg-fixed mb:bg-cover bg-bg-custom'>
+      <body>
+        <div className='bg-fixed bg-cover bg-bg-custom'>
           <Navbar />
           {children}
           <Footer />
+        </div>
       </body>
     </html>
   );
