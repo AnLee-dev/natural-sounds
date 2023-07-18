@@ -6,7 +6,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html>
       <body>
-        <div className='w-full h-full bg-fixed bg-inherit bg-cover bg-bg-custom'>
+        <div className='w-full h-full bg-fixed bg-cover bg-bg-custom'>
           <Navbar />
           {children}
           <Footer />
