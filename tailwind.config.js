@@ -23,4 +23,10 @@ module.exports = {
   },
   plugins: [],
   important: true,
+  screens: {
+    'mb': '374px',
+    'tb': '640px',
+    'lt': '1024px',
+    'dt': '1280px',
+  },
 }
