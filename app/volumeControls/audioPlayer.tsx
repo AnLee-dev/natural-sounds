@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 
 type TProps = {
   playing: boolean;
@@ -7,11 +7,6 @@ type TProps = {
   handlePause: () => void;
 };
 function AudioPlayer({ playing, handlePlay, handlePause }: TProps) {
-  const playPauseButtonRef = useRef<HTMLButtonElement>(null);
-
-  useEffect(() => {
-    playPauseButtonRef.current?.focus();
-  }, []);
 
   const togglePlayAndPause = () => {
     if (playing) {

@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import Image from "next/image";
 import hill from "../../public/images/hill.jpg";
@@ -20,7 +21,7 @@ function Footer() {
           </p>
         </div>
         <div className="flex flex-wrap md:-m-2 -m-1">
-          <div className="flex flex-wrap w-1/2">
+          <div className="flex flex-wrap md:w-1/2">
             <div className="md:p-2 p-1 w-1/2">
               <Image
                 alt="hill"
@@ -43,7 +44,7 @@ function Footer() {
               />
             </div>
           </div>
-          <div className="flex flex-wrap w-1/2">
+          <div className="flex flex-wrap md:w-1/2">
             <div className="md:p-2 p-1 w-full">
               <Image
                 alt="lake"
