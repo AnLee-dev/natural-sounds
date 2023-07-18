@@ -10,14 +10,10 @@ type TProps = {
 function AudioPlayer({ playing, handlePlay, handlePause }: TProps) {
 
   const togglePlayAndPause = (e: any) => {
-    console.log('hehe', e);
-    
     if (playing) {
       handlePause();
-      e.preventDefault();
     } else {
       handlePlay();
-      e.preventDefault();
     }
   };
 

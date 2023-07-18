@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import ReactPlayer from 'react-player/lazy'
-// import { ReactPlayerProps } from "react-player/types/lib";
+import dynamic from 'next/dynamic'
+const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 import VolumeAudio from "./volumeAudio";
 import React from "react";
 
@@ -11,17 +11,11 @@ type TProps = {
 };
 
 function VolumeControls({ url, playing }: TProps) {
-  // const ReactPlayer = _ReactPlayer as unknown as React.FC<ReactPlayerProps>;
   const [volume, setVolume] = useState<number>(0);
 
   const handleVolumeChange = (newVolume: number) => {
     setVolume(newVolume);
   };
-
-  const check = (e: any) =>{
-    console.log(e);
-    
-  }
 
   return (
     <React.Fragment>
