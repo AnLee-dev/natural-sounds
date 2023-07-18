@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import dynamic from 'next/dynamic'
 const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 import VolumeAudio from "./volumeAudio";
@@ -12,6 +12,11 @@ type TProps = {
 
 function VolumeControls({ url, playing }: TProps) {
   const [volume, setVolume] = useState<number>(0);
+  const [muted, setMuted] = useState<boolean>(true);
+
+  useEffect(() => (
+    volume > 0 ? setMuted(false) : setMuted(true)
+  ),[volume])
 
   const handleVolumeChange = (newVolume: number) => {
     setVolume(newVolume);
@@ -23,7 +28,8 @@ function VolumeControls({ url, playing }: TProps) {
         className="w-0 !important h-0 !important"
         url={url}
         playing={playing}
-        volume={0}
+        volume={volume}
+        muted={muted}
         loop={true}
         playsinline
       />
