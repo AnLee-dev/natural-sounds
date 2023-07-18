@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import { default as _ReactPlayer } from "react-player/lazy";
-import { ReactPlayerProps } from "react-player/types/lib";
+import ReactPlayer from 'react-player/lazy'
+// import { ReactPlayerProps } from "react-player/types/lib";
 import VolumeAudio from "./volumeAudio";
 import React from "react";
 
@@ -11,7 +11,7 @@ type TProps = {
 };
 
 function VolumeControls({ url, playing }: TProps) {
-  const ReactPlayer = _ReactPlayer as unknown as React.FC<ReactPlayerProps>;
+  // const ReactPlayer = _ReactPlayer as unknown as React.FC<ReactPlayerProps>;
   const [volume, setVolume] = useState<number>(0);
 
   const handleVolumeChange = (newVolume: number) => {
