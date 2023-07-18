@@ -25,6 +25,7 @@ function VolumeControls({ url, playing }: TProps) {
         playing={playing}
         volume={volume}
         loop={true}
+        playsinline
       />
       <VolumeAudio volume={volume} handleVolumeChange={handleVolumeChange} />
     </React.Fragment>
