@@ -5,7 +5,7 @@ import Footer from "@/app/footer/page";
 
 function Home() {
   return (
-    <div className="bg-cover bg-my-custom-bg-class bg-no-repeat">
+    <div className="bg-fixed bg-cover bg-my-custom-bg-class bg-no-repeat">
       <Navbar />
       <Content />
       <Footer />

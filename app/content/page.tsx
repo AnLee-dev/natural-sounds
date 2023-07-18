@@ -22,8 +22,8 @@ function Content() {
         handlePause={handlePause}
       />
       <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-wrap">
-          <div className="xl:w-1/6 lg:w-1/4 md:w-full px-8 py-6">
+        <div className="flex flex-wrap justify-center items-center">
+          <div className="w-1/2 xl:w-1/6 lg:w-1/4 px-8 py-6">
             <div className="bg-icon bg-rain w-24 h-24 mx-auto my-0"></div>
             <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2 text-center">
               Rain
@@ -37,7 +37,7 @@ function Content() {
               </span>
             </div>
           </div>
-          <div className="xl:w-1/6 lg:w-1/4 md:w-full px-8 py-6">
+          <div className="w-1/2 xl:w-1/6 lg:w-1/4 px-8 py-6">
             <div className="bg-icon bg-thunder w-24 h-24 mx-auto my-0"></div>
             <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2 text-center">
               Thunder
@@ -51,7 +51,7 @@ function Content() {
               </span>
             </div>
           </div>
-          <div className="xl:w-1/6 lg:w-1/4 md:w-full px-8 py-6">
+          <div className="w-1/2 xl:w-1/6 lg:w-1/4 px-8 py-6">
             <div className="bg-icon bg-wave w-24 h-24 mx-auto my-0"></div>
             <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2 text-center">
               Waves
@@ -65,7 +65,7 @@ function Content() {
               </span>
             </div>
           </div>
-          <div className="xl:w-1/6 lg:w-1/4 md:w-full px-8 py-6">
+          <div className="w-1/2 xl:w-1/6 lg:w-1/4 px-8 py-6">
             <div className="bg-icon bg-wind w-24 h-24 mx-auto my-0"></div>
             <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2 text-center">
               Wind
@@ -79,7 +79,7 @@ function Content() {
               </span>
             </div>
           </div>
-          <div className="xl:w-1/6 lg:w-1/4 md:w-full px-8 py-6">
+          <div className="w-1/2 xl:w-1/6 lg:w-1/4 px-8 py-6">
             <div className="bg-icon bg-fire w-24 h-24 mx-auto my-0"></div>
             <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2 text-center">
               Fire
@@ -93,7 +93,7 @@ function Content() {
               </span>
             </div>
           </div>
-          <div className="xl:w-1/6 lg:w-1/4 md:w-full px-8 py-6">
+          <div className="w-1/2 xl:w-1/6 lg:w-1/4 px-8 py-6">
             <div className="bg-icon bg-birds w-24 h-24 mx-auto my-0"></div>
             <h2 className="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2 text-center">
               Birds
