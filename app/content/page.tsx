@@ -15,7 +15,7 @@ function Content() {
   };
 
   return (
-    <div className="text-gray-600 body-font">
+    <div className="text-gray-600">
       <AudioPlayer
         playing={playing}
         handlePlay={handlePlay}
