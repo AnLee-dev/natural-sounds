@@ -3,7 +3,7 @@ import Content from "@/app/content/page";
 
 function Home() {
   return (
-    <div>
+    <div className="pt">
       <Content />
     </div>
   );
