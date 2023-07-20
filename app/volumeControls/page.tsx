@@ -8,18 +8,22 @@ import React from "react";
 type TProps = {
   url: string;
   playing: boolean;
+  setVolume: React.Dispatch<React.SetStateAction<number>>;
+  volume: number;
 };
 
-function VolumeControls({ url, playing }: TProps) {
-  const [volume, setVolume] = useState<number>(0);
+function VolumeControls({ url, playing, setVolume, volume }: TProps) {
+  const [volumes, setVolumes] = useState<number>(0);
   const [muted, setMuted] = useState<boolean>(true);
 
   useEffect(() => (
-    volume > 0 ? setMuted(false) : setMuted(true)
-  ),[volume])
+    volumes > 0 ? setMuted(false) : setMuted(true)
+  ),[volumes])
 
+  useEffect(() => setVolume(volume),[setVolume, volume]);
+  
   const handleVolumeChange = (newVolume: number) => {
-    setVolume(newVolume);
+    setVolumes(newVolume);
   };
 
   return (
@@ -28,12 +32,12 @@ function VolumeControls({ url, playing }: TProps) {
         className="w-0 !important h-0 !important"
         url={url}
         playing={playing}
-        volume={volume}
+        volume={volumes}
         muted={muted}
         loop={true}
         playsinline
       />
-      <VolumeAudio volume={volume} handleVolumeChange={handleVolumeChange} />
+      <VolumeAudio volume={volumes} handleVolumeChange={handleVolumeChange} />
     </React.Fragment>
   );
 }

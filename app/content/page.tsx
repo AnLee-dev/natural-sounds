@@ -5,7 +5,7 @@ import AudioPlayer from "../volumeControls/audioPlayer";
 
 function Content() {
   const [playing, setPlaying] = useState<boolean>(false);
-
+  const [volume, setVolume] = useState<number>(0);
   const handlePlay = () => {
     setPlaying(true);
   };
@@ -27,7 +27,7 @@ function Content() {
             <div className="w-[150px] h-[180px] flex flex-col items-center justify-center">
               <div className="w-[100px] h-[100px] py-4 relative">
                 <div className="absolute cursor-default bg-icon bg-rain w-full h-full mx-auto my-0"></div>
-                <div className="absolute cursor-default bg-icon bg-rain-white w-full h-full opacity-40 mx-auto my-0"></div>
+                <div style={{'opacity': volume}} className="absolute cursor-default bg-icon bg-rain-white w-full h-full mx-auto my-0"></div>
               </div>
               <h2 className="mt-4 left-auto cursor-default text-lg sm:text-xl dark:text-white text-gray-900 font-medium title-font mb-2 text-center">
                 Rain
@@ -37,6 +37,8 @@ function Content() {
                   <VolumeControls
                     url="https://st2.asoftmurmur.com/assets/p/content/rain/main-rain.mp4"
                     playing={playing}
+                    setVolume={setVolume}
+                    volume={volume}
                   />
                 </span>
               </div>
@@ -46,7 +48,7 @@ function Content() {
             <div className="w-[150px] h-[180px] flex flex-col items-center justify-center">
               <div className="w-[100px] h-[100px] py-4 relative">
                 <div className="absolute cursor-default bg-icon bg-thunder w-full h-full mx-auto my-0"></div>
-                <div className="absolute cursor-default bg-icon bg-thunder-white w-full h-full opacity-40 mx-auto my-0"></div>
+                <div style={{'opacity': volume}} className="absolute cursor-default bg-icon bg-thunder-white w-full h-full mx-auto my-0"></div>
               </div>
               <h2 className="mt-4 left-auto cursor-default text-lg sm:text-xl dark:text-white text-gray-900 font-medium title-font mb-2 text-center">
               Thunder
@@ -56,6 +58,8 @@ function Content() {
                   <VolumeControls
                     url="https://st2.asoftmurmur.com/assets/p/content/thunder/main-thunder.mp4"
                     playing={playing}
+                    setVolume={setVolume}
+                    volume={volume}
                   />
                 </span>
               </div>
@@ -65,7 +69,7 @@ function Content() {
             <div className="w-[150px] h-[180px] flex flex-col items-center justify-center">
               <div className="w-[100px] h-[100px] py-4 relative">
                 <div className="absolute cursor-default bg-icon bg-wave w-full h-full mx-auto my-0"></div>
-                <div className="absolute cursor-default bg-icon bg-wave-white w-full h-full opacity-40 mx-auto my-0"></div>
+                <div style={{'opacity': volume}} className="absolute cursor-default bg-icon bg-wave-white w-full h-full mx-auto my-0"></div>
               </div>
               <h2 className="mt-4 left-auto cursor-default text-lg sm:text-xl dark:text-white text-gray-900 font-medium title-font mb-2 text-center">
               Waves
@@ -75,6 +79,8 @@ function Content() {
                   <VolumeControls
                     url="https://st3.asoftmurmur.com/assets/p/content/waves/main-waves.mp4"
                     playing={playing}
+                    setVolume={setVolume}
+                    volume={volume}
                   />
                 </span>
               </div>
@@ -84,7 +90,7 @@ function Content() {
             <div className="w-[150px] h-[180px] flex flex-col items-center justify-center">
               <div className="w-[100px] h-[100px] py-4 relative">
                 <div className="absolute cursor-default bg-icon bg-wind w-full h-full mx-auto my-0"></div>
-                <div className="absolute cursor-default bg-icon bg-wind-white w-full h-full opacity-40 mx-auto my-0"></div>
+                <div style={{'opacity': volume}} className="absolute cursor-default bg-icon bg-wind-white w-full h-full mx-auto my-0"></div>
               </div>
               <h2 className="mt-4 left-auto cursor-default text-lg sm:text-xl dark:text-white text-gray-900 font-medium title-font mb-2 text-center">
               Wind
@@ -94,6 +100,8 @@ function Content() {
                   <VolumeControls
                     url="https://st2.asoftmurmur.com/assets/p/content/wind/main-wind.mp4"
                     playing={playing}
+                    setVolume={setVolume}
+                    volume={volume}
                   />
                 </span>
               </div>
@@ -103,7 +111,7 @@ function Content() {
             <div className="w-[150px] h-[180px] flex flex-col items-center justify-center">
               <div className="w-[100px] h-[100px] py-4 relative">
                 <div className="absolute cursor-default bg-icon bg-fire w-full h-full mx-auto my-0"></div>
-                <div className="absolute cursor-default bg-icon bg-fire-white w-full h-full opacity-40 mx-auto my-0"></div>
+                <div style={{'opacity': volume}} className="absolute cursor-default bg-icon bg-fire-white w-full h-full mx-auto my-0"></div>
               </div>
               <h2 className="mt-4 left-auto cursor-default text-lg sm:text-xl dark:text-white text-gray-900 font-medium title-font mb-2 text-center">
               Fire
@@ -113,6 +121,8 @@ function Content() {
                   <VolumeControls
                     url="https://st2.asoftmurmur.com/assets/p/content/fire/main-fire.mp4"
                     playing={playing}
+                    setVolume={setVolume}
+                    volume={volume}
                   />
                 </span>
               </div>
@@ -122,7 +132,7 @@ function Content() {
             <div className="w-[150px] h-[180px] flex flex-col items-center justify-center">
               <div className="w-[100px] h-[100px] py-4 relative">
                 <div className="absolute cursor-default bg-icon bg-birds w-full h-full mx-auto my-0"></div>
-                <div className="absolute cursor-default bg-icon bg-birds-white w-full h-full opacity-40 mx-auto my-0"></div>
+                <div style={{'opacity': volume}} className="absolute cursor-default bg-icon bg-birds-white w-full h-full mx-auto my-0"></div>
               </div>
               <h2 className="mt-4 left-auto cursor-default text-lg sm:text-xl dark:text-white text-gray-900 font-medium title-font mb-2 text-center">
               Birds
@@ -132,6 +142,8 @@ function Content() {
                   <VolumeControls
                     url="https://st3.asoftmurmur.com/assets/p/content/birds/main-birds.mp4"
                     playing={playing}
+                    setVolume={setVolume}
+                    volume={volume}
                   />
                 </span>
               </div>
