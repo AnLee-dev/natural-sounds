@@ -1,16 +1,22 @@
 "use client";
+
+import { useRef } from "react";
+
 type Props = {
   volume: number;
   handleVolumeChange: (newVolume: number) => void;
 };
 
-function VolumeAudio ({ volume, handleVolumeChange }: Props) {
+function VolumeAudio({ volume, handleVolumeChange }: Props) {
+  
   const handleChangeInVolume = (e: React.ChangeEvent<HTMLInputElement>) => {
     handleVolumeChange(Number(e.target.value));
+    focus();
   };
 
   return (
     <input
+      id="audio"
       type="range"
       min={0}
       max={1}

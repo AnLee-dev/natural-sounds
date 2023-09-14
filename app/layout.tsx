@@ -10,7 +10,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
     <html>
       <body>
         <ThemeProvider attribute="class">
-        <div className='w-full h-full bg-inherit bg-fixed bg-cover bg-bg-custom dark:bg-bg-custom-dask'>
+        <div className='w-full h-full bg-inherit bg-fixed bg-cover bg-bg-custom-mobile dark:bg-bg-custom-mobile-dark sm:bg-bg-custom sm:dark:bg-bg-custom-dark'>
           <Navbar />
           {children}
           <Footer />

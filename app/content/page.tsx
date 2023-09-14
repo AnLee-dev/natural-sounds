@@ -1,11 +1,18 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import VolumeControls from "../volumeControls/page";
 import AudioPlayer from "../volumeControls/audioPlayer";
 
 function Content() {
   const [playing, setPlaying] = useState<boolean>(false);
   const [volume, setVolume] = useState<number>(0);
+
+  // const a  = document.getElementById('audio') as HTMLInputElement | null;
+
+  // useEffect(() => {
+  //   a?.value ? setVolume(parseFloat(a?.value)) : setVolume(0)
+  // },[a])
+  
   const handlePlay = () => {
     setPlaying(true);
   };
@@ -37,8 +44,6 @@ function Content() {
                   <VolumeControls
                     url="https://st2.asoftmurmur.com/assets/p/content/rain/main-rain.mp4"
                     playing={playing}
-                    setVolume={setVolume}
-                    volume={volume}
                   />
                 </span>
               </div>
@@ -58,8 +63,6 @@ function Content() {
                   <VolumeControls
                     url="https://st2.asoftmurmur.com/assets/p/content/thunder/main-thunder.mp4"
                     playing={playing}
-                    setVolume={setVolume}
-                    volume={volume}
                   />
                 </span>
               </div>
@@ -79,8 +82,6 @@ function Content() {
                   <VolumeControls
                     url="https://st3.asoftmurmur.com/assets/p/content/waves/main-waves.mp4"
                     playing={playing}
-                    setVolume={setVolume}
-                    volume={volume}
                   />
                 </span>
               </div>
@@ -100,8 +101,6 @@ function Content() {
                   <VolumeControls
                     url="https://st2.asoftmurmur.com/assets/p/content/wind/main-wind.mp4"
                     playing={playing}
-                    setVolume={setVolume}
-                    volume={volume}
                   />
                 </span>
               </div>
@@ -121,8 +120,6 @@ function Content() {
                   <VolumeControls
                     url="https://st2.asoftmurmur.com/assets/p/content/fire/main-fire.mp4"
                     playing={playing}
-                    setVolume={setVolume}
-                    volume={volume}
                   />
                 </span>
               </div>
@@ -142,8 +139,6 @@ function Content() {
                   <VolumeControls
                     url="https://st3.asoftmurmur.com/assets/p/content/birds/main-birds.mp4"
                     playing={playing}
-                    setVolume={setVolume}
-                    volume={volume}
                   />
                 </span>
               </div>
